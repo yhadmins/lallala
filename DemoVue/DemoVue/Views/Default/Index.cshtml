@@ -1,0 +1,45 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+</head>
+<body>
+    <div id="app">
+        <ul>
+            @*循环输出*@
+            <li v-for="book in books">{{book.name}}</li>
+        
+        </ul>
+    </div>
+    <div id="mess">{{message}}</div>
+    <script src="~/vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                books: [  // 一定是中括号
+                    { name: '《实战》' },
+                    { name: '《实战2》' },
+                    { name: '《实战3》' }
+
+                ]
+            }
+        })
+        new Vue({
+            el: '#mess',
+            data: {
+
+                message: 'Hello,Word!'
+            }
+
+
+        })
+    </script>
+</body>
+</html>
+
